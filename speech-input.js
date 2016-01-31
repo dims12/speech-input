@@ -68,6 +68,11 @@
 			inputEl.value = finalTranscript;
 			restartTimer();
 		};
+        
+        recognition.onerror = function(error) {
+            console.log(error);
+            console.log('Error: ' + error.error);
+        }
 
 		micBtn.addEventListener('click', function(event) {
 			event.preventDefault();
